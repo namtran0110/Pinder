@@ -1,1 +1,80 @@
 @import "bootstrap";
+
+.logo {
+  max-width: 100%;
+  max-height: 30px;
+}
+
+.Pinder_nav {
+  background-color: red;
+}
+
+.Pinder_banner {
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.Pinder_slogan {
+  padding-top: 250px;
+  color: white;
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
+.main_button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 35px;
+  width: 300px;
+  height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.main_button:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid white;
+  border-radius: 35px;
+  width: 300px;
+  height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.white_background_main_button {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
+  border-radius: 35px;
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+}
+
+.white_background_main_button:hover {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  border-radius: 35px;
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+}
+
+.sign_up_form {
+  margin-top: 100px;
+  width: 400px;
+}
+
+.sign_up_img {
+  max_width: 100%;
+}
+
+.no_padding {
+  padding: 0 0 0 0;
+}
