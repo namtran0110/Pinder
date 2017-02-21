@@ -1,0 +1,28 @@
+<h1>Inbox</h1>
+
+<% if @messages.empty? %>
+    <div class="alert alert-error">No Message? No Friend? :))</div>
+<% end %>
+<table class="table table-striped">
+  <thead class="thead thead-default">
+  <tr>
+    <th>
+      Sender
+    </th>
+    <th>
+      Subject
+    </th>
+  </tr>
+  </thead>
+  <% @messages.each do |message| %>
+      <tr>
+        <td>
+          <%= message.sender || "Nobody but you" %>
+        </td>
+
+        <td>
+          <%= message.subject %>
+        </td>
+      </tr>
+  <% end %>
+</table>
