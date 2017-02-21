@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Trirong:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
 
 .logo {
   max-width: 100%;
@@ -69,6 +71,13 @@
 .sign_up_form {
   margin-top: 100px;
   width: 400px;
+  font-family: 'Trirong', light;
+}
+
+.Login_form {
+  margin-top: 150px;
+  width: 400px;
+  font-family: 'Trirong', light;
 }
 
 .sign_up_img {
