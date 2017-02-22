@@ -9,10 +9,12 @@
     <div class="nav-item">
       <% if current_user %>
           <%= link_to "Messages", messages_path, method: 'get', class:'nav_link' %>
+          <%= link_to "New Message", new_message_path, :method => :get, class: 'nav_link' %>
       <% end %>
       <% if current_user %>
           <%= link_to "Log Out", log_out_path, method: 'delete', class:'nav_link' %>
       <% end %>
+
     </div>
   </div>
 </nav>
