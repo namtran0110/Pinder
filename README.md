@@ -14,16 +14,16 @@ Here's a sample app that meets REQUIRED stories.
 User Stories
 The following required functionality is complete:
 
-[]User can sign up by providing their email, password, and name.
-[]User can login using an email and password.
-[]After logging in, the user is taken to an INBOX page that has a list of incoming messages, sorted in descending chronological order (newest messages at top)
+[x]User can sign up by providing their email, password, and name.
+[x]User can login using an email and password.
+[x]After logging in, the user is taken to an INBOX page that has a list of incoming messages, sorted in descending chronological order (newest messages at top)
 []Provide a fake "new message" link and a "sent messages" link BUT don't have to make them work yet.
 []Unread messages should be bold or something similar in the list of messages.
 []Implement "Users" link to take the user to a page that lists all users. Next to/under each user, provide a link to "Add As Friend" to add the user to your list of friends.
 []Implement "New Message" page. The recipient field should be a dropdown, where the options are names from the user's friends.
 []Implement "Sent Messages" page. It lists messages you have sent. Each message should display at what time it was read by the recipient, or "unread".
 []User can read a message's content only once. Once the message has been read, the user will see a page indicating the message has already been read.
-[]User can only read messages where they are the recipient.
+[x]User can only read messages where they are the recipient.
 
 Bonus User Stories
 []User cannot read the contents messages on Sent Messages page (only see subject, recipient and time sent)
