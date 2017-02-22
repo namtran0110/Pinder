@@ -7,7 +7,7 @@
   <div class="row">
     <% @messages.each do |message| %>
           <div class="col-md-3 message_row">
-            <%= message.sender || "Nobody but you" %>
+            <%= message.sender.name || "Nobody but you" %>
           </div>
           <div class="col-md-3 message_row">
             <%= message.subject %>
