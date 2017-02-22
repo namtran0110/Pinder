@@ -4,9 +4,14 @@
   </button>
   <a class="navbar-brand" href="<%= root_path %>"><%= image_tag ('logo'), class: 'logo'%></span></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
     <div class="nav-item">
       <% if current_user %>
-          <%= link_to "Log Out #{current_user}", log_out_path, method: 'delete', class:'nav-link' %>
+          <%= link_to "Messages", messages_path, method: 'get', class:'nav_link' %>
+      <% end %>
+      <% if current_user %>
+          <%= link_to "Log Out", log_out_path, method: 'delete', class:'nav_link' %>
       <% end %>
     </div>
   </div>

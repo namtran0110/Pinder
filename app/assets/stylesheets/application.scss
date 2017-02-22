@@ -87,3 +87,25 @@
 .no_padding {
   padding: 0 0 0 0;
 }
+
+.message_row {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.nav_link {
+  text-transform: uppercase;
+  padding-left: 20px;
+  color: white;
+}
+
+.nav_link:hover {
+  text-transform: uppercase;
+  padding-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.inbox {
+  margin-top: 50px;
+}
