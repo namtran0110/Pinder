@@ -1,0 +1,29 @@
+<style>
+  body {
+    background-color: #FAFAFA;
+  }
+</style>
+<div class="showcase">
+  <div class="container" style="width: 600px;">
+    <% if current_user %>
+        <% @users.each do |user| %>
+            <div class="each_profile">
+              <div>
+                <p class="username"><%= user.name %></p>
+              </div>
+              <div class="text-center">
+                <%= image_tag user.image_or_default, class: 'user_img' %>
+              </div>
+              <div>
+                <p class="user_email text-center"><%= user.email %></p>
+              </div>
+              <div>
+                <p class="user_email text-center">
+                  <%= link_to 'Show More', user_path(user) %>
+                </p>
+              </div>
+            </div>
+        <% end %>
+    <% end %>
+  </div>
+</div>

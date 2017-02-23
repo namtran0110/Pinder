@@ -2,19 +2,20 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="<%= root_path %>"><%= image_tag ('logo.png'), class: 'logo'%></span></a>
+  <a class="navbar-brand" href="<%= users_path %>"><%= image_tag ('logo.png'), class: 'logo' %></span></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     </ul>
     <div class="nav-item">
       <% if current_user %>
-          <%= link_to "Messages", messages_path, method: 'get', class:'nav_link' %>
-          <%= link_to "New Message", new_message_path, :method => :get, class: 'nav_link' %>
+          <%= link_to messages_path, method: 'get', class: 'nav_link' do %>
+              <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
+          <% end %>
+          <%= link_to edit_user_url(current_user), :method => :get, class: 'nav_link' do %>
+              <%= image_tag current_user.image_or_default, class: 'user_icon' %>
+          <% end %>
+          <%= link_to "Log Out", log_out_path, method: 'delete', class: 'nav_link' %>
       <% end %>
-      <% if current_user %>
-          <%= link_to "Log Out", log_out_path, method: 'delete', class:'nav_link' %>
-      <% end %>
-
     </div>
   </div>
 </nav>

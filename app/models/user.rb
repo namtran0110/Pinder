@@ -10,4 +10,9 @@ class User < ApplicationRecord
   def unread_messages
     received_messages.where(read_at: nil)
   end
+
+  def image_or_default
+    image.presence || "http://loremflickr.com/320/245/#{name.gsub(' ',' ')}"
+  end
+
 end

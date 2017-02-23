@@ -1,6 +1,5 @@
 <div class="container inbox">
   <h1>Inbox</h1>
-
   <% if @messages.empty? %>
       <div class="alert alert-error">No Message? No Friend? :))</div>
   <% end %>
@@ -16,5 +15,6 @@
             <%= message.body %>
           </div>
     <% end %>
+    <%= button_to "New Message", new_message_path, :method => :get, class: 'white_background_main_button' %>
   </div>
 </div>

@@ -109,3 +109,32 @@
 .inbox {
   margin-top: 50px;
 }
+
+.user_img{
+  max-width: 600px;
+  min-width: 600px;
+}
+
+.each_profile {
+  background-color: white;
+  margin-top: 20px;
+  width: 605px;
+  border: 1px solid #D8D8D8;
+  border-radius: 10px;
+}
+
+.username {
+  padding: 15px 0 0 10px;
+  font-family: "Bangla MN";
+}
+
+.user_email {
+  padding: 15px 0 0 10px;
+  font-family: "Bangla MN";
+}
+
+.user_icon {
+  max-width: 30px;
+  min-width: 30px;
+  border-radius: 100%;
+}
