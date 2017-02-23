@@ -1,20 +1,38 @@
 <div class="container inbox">
-  <h1>Inbox</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Inbox</h1>
+    </div>
+    <div class="text-right col-md-6">
+      <%= button_to "New Message", new_message_path, :method => :get, class: 'white_background_main_button new-message' %>
+    </div>
+  </div>
+
   <% if @messages.empty? %>
       <div class="alert alert-error">No Message? No Friend? :))</div>
   <% end %>
-  <div class="row">
+  <div class="row emails">
     <% @messages.each do |message| %>
-          <div class="col-md-3 message_row">
-            <%= message.sender.name || "Nobody but you" %>
+        <div class="col-md-2 message_row text-center">
+          <%= image_tag message.sender.image, class: 'inbox-profile-image' %>
+        </div>
+        <div class="col-md-2 message_row">
+          <p class="text_message"><%= message.sender.name || "Nobody but you" %></p>
+        </div>
+        <div class="col-md-2 message_row">
+          <p class="text_message"><%= message.subject %></p>
+        </div>
+        <div class="col-md-4 message_row">
+          <p class="text_message"><%= message.body %></p>
+        </div>
+        <div class="col-md-2 message_row row">
+          <div class="col-md 6">
+            <p class="text_message"><%= link_to "Show", message, :method => :get %></p>
           </div>
-          <div class="col-md-3 message_row">
-            <%= message.subject %>
+          <div class="col-md 6">
+            <p class="text_message"><%= link_to "Delete", message, :method => :delete %></p>
           </div>
-          <div class="col-md-6 message_row">
-            <%= message.body %>
-          </div>
+        </div>
     <% end %>
-    <%= button_to "New Message", new_message_path, :method => :get, class: 'white_background_main_button' %>
   </div>
 </div>

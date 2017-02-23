@@ -16,6 +16,17 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @message = Message.find(params[:id]).destroy
+    respond_to do |format|
+      format.html { redirect_to message_url, notice: 'Message was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  def show
+  end
+
   def message_params
     params.require(:message).permit(:sender_id, :recipient_id, :subject, :body)
   end
