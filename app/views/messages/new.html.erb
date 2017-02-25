@@ -6,7 +6,7 @@
       </div>
       <div class="form-group">
         <%= f.label 'To :' %>
-        <%= f.text_field :recipient_id, class: 'form-control' %>
+        <%= f.select :recipient_id, @friends.map {|f| [f.email, f.id]}, class: 'form-control' %>
       </div>
       <div class="form-group">
         <%= f.label :Subject %>

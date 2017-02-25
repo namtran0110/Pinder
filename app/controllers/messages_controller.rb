@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
 
   def new
     @message = current_user.sent_messages.build
+    @friends = current_user.friends + current_user.inverse_friends
   end
 
   def create
@@ -19,13 +20,16 @@ class MessagesController < ApplicationController
   def destroy
     @message = Message.find(params[:id]).destroy
     respond_to do |format|
-      format.html { redirect_to message_url, notice: 'Message was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Message was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   def show
     @message = Message.find(params[:id])
+    if @message.recipient_id == current_user.id
+      @message.update_attributes(:read_at => Time.now)
+    end
   end
 
   private
