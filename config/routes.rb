@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  post 'friendships/create'
+
+  get 'friendships/destroy'
+
   resources :messages
   resources :sessions, only: [:new, :create]
   resources :users

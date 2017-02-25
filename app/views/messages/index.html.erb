@@ -16,14 +16,11 @@
         <div class="col-md-2 message_row text-center">
           <%= image_tag message.sender.image, class: 'inbox-profile-image' %>
         </div>
-        <div class="col-md-2 message_row">
+        <div class="col-md-4 message_row">
           <p class="text_message"><%= message.sender.name || "Nobody but you" %></p>
         </div>
-        <div class="col-md-2 message_row">
-          <p class="text_message"><%= message.subject %></p>
-        </div>
         <div class="col-md-4 message_row">
-          <p class="text_message"><%= message.body %></p>
+          <p class="text_message"><%= message.subject %></p>
         </div>
         <div class="col-md-2 message_row row">
           <div class="col-md 6">

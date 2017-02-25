@@ -13,3 +13,16 @@
     </div>
   </div>
 </div>
+
+<% for friendship in @user.friendships %>
+    <%= image_tag friendship.friend.image, class: 'user_icon' %>
+    <%= friendship.friend.name %>
+    <%= link_to "Unfriend", friendships_destroy_path(:id => friendship.id) %>
+<% end %>
+
+<% for inverse_friendship in @user.inverse_friendships %>
+    <%= image_tag  inverse_friendship.user.image, class: 'user_icon' %>
+    <%= inverse_friendship.friend.name %>
+    <%= link_to "Unfriend", friendships_destroy_path(:id => inverse_friendship.id) %>
+<% end %>
+

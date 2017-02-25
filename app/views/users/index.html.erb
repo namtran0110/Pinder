@@ -17,10 +17,17 @@
               <div>
                 <p class="user_email text-center"><%= user.email %></p>
               </div>
-              <div>
-                <p class="user_email text-center">
-                  <%= link_to 'Show More', user_path(user) %>
-                </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="user_email text-left">
+                    <%= link_to 'Show More', user_path(user) %>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="user_email text-right">
+                    <%= link_to "Add Friend", friendships_create_path(:friend_id => user), :method => :post %>
+                  </p>
+                </div>
               </div>
             </div>
         <% end %>
