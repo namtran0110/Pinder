@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   get 'friendships/destroy'
 
-  resources :messages
+  resources :messages do
+    collection do
+      get :sent
+      get :received
+    end
+  end
   resources :sessions, only: [:new, :create]
   resources :users
   root "home#index"

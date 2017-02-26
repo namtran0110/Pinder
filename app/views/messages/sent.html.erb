@@ -13,30 +13,30 @@
     <% @messages.each do |message| %>
         <% if message.read_at %>
             <div class="col-md-2 message_row text-center">
-              <%= image_tag message.sender.image, class: 'inbox-profile-image' %>
+              <%= image_tag message.recipient.image, class: 'inbox-profile-image' %>
             </div>
             <div class="col-md-4 message_row">
-              <p class="text_message"><%= message.sender.name || "Nobody but you" %></p>
+              <p class="text_message"><%= message.recipient.name %></p>
             </div>
             <div class="col-md-4 message_row">
               <p class="text_message"><%= message.subject %></p>
             </div>
             <div class="col-md-2 message_row row">
-              <p class="text_message">MESSAGE READ</p>
+              <p class="text_message">Read at <%= message.read_at %></p>
             </div>
         <% else %>
             <div class="col-md-2 message_row text-center">
-              <%= image_tag message.sender.image, class: 'inbox-profile-image' %>
+              <%= image_tag message.recipient.image, class: 'inbox-profile-image' %>
             </div>
             <div class="col-md-4 message_row">
-              <p class="text_message_unread"><%= message.sender.name || "Nobody but you" %></p>
+              <p class="text_message"><%= message.recipient.name %></p>
             </div>
             <div class="col-md-4 message_row">
-              <p class="text_message_unread"><%= message.subject %></p>
+              <p class="text_message"><%= message.subject %></p>
             </div>
             <div class="col-md-2 message_row row">
               <div class="col-md 12">
-                <p class="text_message_unread"><%= link_to "OPEN", message, :method => :get %></p>
+                <p class="text_message"> Not Open Yet</p>
               </div>
             </div>
         <% end %>

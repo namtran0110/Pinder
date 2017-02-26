@@ -139,6 +139,12 @@
   border-radius: 100%;
 }
 
+.user_icon_interested {
+  max-width: 90px;
+  min-width: 90px;
+  border-radius: 100%;
+}
+
 .profile-edit-image {
   max-width: 520px;
 }
@@ -168,4 +174,19 @@
 
 .message_box {
   margin-top: 100px;
+
+}
+
+.text_message_unread {
+  margin: 15px 0 0 0;
+  color: red;
+}
+
+.heart_button {
+  color: #FA6C85;
+}
+
+.heart_button:hover {
+  color: pink;
+  text-decoration: none;
 }

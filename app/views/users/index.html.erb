@@ -1,3 +1,4 @@
+
 <style>
   body {
     background-color: #FAFAFA;
@@ -14,18 +15,19 @@
               <div class="text-center">
                 <%= image_tag user.image_or_default, class: 'user_img' %>
               </div>
-              <div>
-                <p class="user_email text-center"><%= user.email %></p>
-              </div>
               <div class="row">
                 <div class="col-md-6">
-                  <p class="user_email text-left">
-                    <%= link_to 'Show More', user_path(user) %>
+                  <p class="user_email text-center">
+                    <%= link_to user_path(user) do %>
+                        <i class="fa fa-eye fa-3x" aria-hidden="true"></i>
+                    <% end %>
                   </p>
                 </div>
                 <div class="col-md-6">
-                  <p class="user_email text-right">
-                    <%= link_to "Add Friend", friendships_create_path(:friend_id => user), :method => :post %>
+                  <p class="user_email text-center">
+                    <%= link_to friendships_create_path(:friend_id => user), :method => :post do %>
+                        <i class="fa fa-heart fa-3x heart_button" aria-hidden="true"></i>
+                    <% end %>
                   </p>
                 </div>
               </div>
@@ -34,3 +36,4 @@
     <% end %>
   </div>
 </div>
+
