@@ -28,7 +28,7 @@ The following required functionality is complete:
 
 [x]Implement "New Message" page. The recipient field should be a dropdown, where the options are names from the user's friends.
 
-[]Implement "Sent Messages" page. It lists messages you have sent. Each message should display at what time it was read by the recipient, or "unread".
+[x]Implement "Sent Messages" page. It lists messages you have sent. Each message should display at what time it was read by the recipient, or "unread".
 
 [x]User can read a message's content only once. Once the message has been read, the user will see a page indicating the message has already been read.
 
